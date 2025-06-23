@@ -36,6 +36,18 @@ This system automatically assigns appropriate ICD-10 diagnosis codes based on me
    python predict.py
    ```
    This will process the test dataset (Test_Project_ICD10_Dataset.csv) and output validation metrics.
+   For uncertainty estimates:
+   ```
+   from uncertainty_estimation import monte_carlo_uncertainty
+
+   results = monte_carlo_uncertainty(transcript, n_samples=5)
+   print(f"Reliable codes: {results['reliable_codes']}")
+   print(f"Confidence: {results['confidence_level']}")
+
+   # for visualization
+   plot_uncertainty(results, save_path='uncertainty.png')
+   
+   ```
 
 # Configuration
 
