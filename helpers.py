@@ -8,7 +8,7 @@ import pandas as pd
 CHAPTER_LIST = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22"]
 ICD_PARAM_REGEX = re.compile(r'\*?\*?(ICD-10 Code):\*?\*? (?P<code>[A-Z0-9.]{3,8})')
 ICD_REGEX = r'(^[A-Z0-9.]{3,8})'
-client = OpenAI(api_key="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")
+client = OpenAI(api_key="sk-proj-......")
 
 VAL_FILE = 'Test_Project_ICD10_Dataset.csv'
 MODEL_NAME = "gpt-4o"
