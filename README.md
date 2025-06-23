@@ -1,8 +1,8 @@
-## ICD10-Prediction
+# ICD10-Prediction
 
 This system automatically assigns appropriate ICD-10 diagnosis codes based on medical transcripts. It uses OpenAI's pre-trained models with structured prompts to identify medical conditions and map them to standardized ICD-10 codes. 
 
-# Installation
+## Installation
 
 1. Clone the repository:
 
@@ -22,7 +22,7 @@ This system automatically assigns appropriate ICD-10 diagnosis codes based on me
     Replace `sk-proj-......` in helpers.py with your actual OpenAI API key<br>
     OR set it as an environment variable
 
-# Usage
+## Usage
 
 1. Web Interface
    Launch the Gradio web interface for interactive testing:
@@ -48,7 +48,7 @@ This system automatically assigns appropriate ICD-10 diagnosis codes based on me
    
    ```
 
-# Configuration
+## Configuration
 
    Key parameters can be modified in helpers.py:
 
@@ -58,9 +58,9 @@ This system automatically assigns appropriate ICD-10 diagnosis codes based on me
   `CHAPTER_LIST`: ICD-10 chapters to consider<br>
   `N_SAMPLES`: Number of samples within the temperature range<br>
 
-# Data Format
+## Data Format
 
-1. Input: Medical transcripts should be provided as plain text<br>
+1. Input: Medical transcripts should be provided as plain text<br><br>
 2. Output:<br>
     **ICD-10 Code**: Primary and secondary diagnosis codes <br>
     **Description**: Human-readable description of the condition <br>
@@ -71,7 +71,7 @@ This system automatically assigns appropriate ICD-10 diagnosis codes based on me
     **Precision**: Accuracy of predicted codes<br>
     **Recall**: Coverage of relevant codes<br>
     **F1-Score**: Harmonic mean of precision and recall<br><br>
-4. Uncertainity estimation metrics:<br>
+4. Uncertainty estimation metrics:<br>
     **Reliable Codes**: Codes appearing in >50% of samples<br>
     **Confidence Score**: 0-1 numerical confidence<br>
     **Confidence Level**: HIGH/MEDIUM/LOW categories<br>
