@@ -56,18 +56,24 @@ This system automatically assigns appropriate ICD-10 diagnosis codes based on me
   `TEMPERATURE`: Model temperature for randomness (default: 0.2)<br>
   `MAX_TOKENS`: Maximum response length (default: 500)<br>
   `CHAPTER_LIST`: ICD-10 chapters to consider<br>
+  `N_SAMPLES`: Number of samples within the temperature range<br>
 
 # Data Format
 
-1. Input: Medical transcripts should be provided as plain text
+1. Input: Medical transcripts should be provided as plain text<br>
 2. Output:<br>
     **ICD-10 Code**: Primary and secondary diagnosis codes <br>
     **Description**: Human-readable description of the condition <br>
     **Evidence**: Supporting quotes from the transcript<br>
     **Probability**: Numerical confidence score<br>
-    **Confidence Level**: High/Medium/Low classification<br>
+    **Confidence Level**: High/Medium/Low classification<br><br>
 3. Evaluation:<br>
     **Precision**: Accuracy of predicted codes<br>
     **Recall**: Coverage of relevant codes<br>
-    **F1-Score**: Harmonic mean of precision and recall<br>
+    **F1-Score**: Harmonic mean of precision and recall<br><br>
+4. Uncertainity estimation metrics:<br>
+    **Reliable Codes**: Codes appearing in >50% of samples<br>
+    **Confidence Score**: 0-1 numerical confidence<br>
+    **Confidence Level**: HIGH/MEDIUM/LOW categories<br>
+    **Code Consistency**: How often each code appears<br>
 
